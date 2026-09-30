@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Privacy Policy · BillBreath</title>
+<style>
+:root { color-scheme: light; --teal:#2A9D8F; --cream:#F7F3E9; --ink:#1a1a1a; }
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+header{background:var(--teal);color:#fff;padding:1.25rem 1.5rem} header a{color:#fff;text-decoration:none;font-weight:600}
+main{max-width:42rem;margin:0 auto;padding:2rem 1.25rem 4rem} h1,h2,h3{line-height:1.25} a{color:var(--teal)}
+nav ul{list-style:none;padding:0} nav li{margin:.5rem 0} .meta{color:#555;font-size:.95rem}
+footer{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;font-size:.9rem;color:#555}
+</style>
+</head>
+<body>
+<header><a href="/">BillBreath</a></header>
+<main>
+<h1>BillBreath Privacy Policy</h1>
+<p><strong>Effective date:</strong> September 30, 2026<br />
+<strong>Operator / Iowa Structured Cabling LLC:</strong> Iowa Structured Cabling LLC<br />
+<strong>Support:</strong> support@billbreath.app  </p>
+<p>This Privacy Policy explains how BillBreath (“we,” “us”) handles information when you use the BillBreath mobile app. Plain language first; details below.</p>
+<h2>1. Quick summary</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Current practice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What the app does</td>
+<td>Paycheck-to-paycheck bill tracking and reminders</td>
+</tr>
+<tr>
+<td>Bank linking</td>
+<td><strong>None</strong> in this version</td>
+</tr>
+<tr>
+<td>Account</td>
+<td>Optional email/password via <strong>Supabase Auth</strong>; or guest (on-device)</td>
+</tr>
+<tr>
+<td>Bills &amp; paycheck</td>
+<td>Entered by you; stored <strong>locally on your device</strong> in the MVP</td>
+</tr>
+<tr>
+<td>Push notifications</td>
+<td>Optional <strong>local</strong> reminders if you allow them</td>
+</tr>
+<tr>
+<td>Ads / sale of personal data</td>
+<td><strong>Not</strong> part of the core MVP described here</td>
+</tr>
+<tr>
+<td>Credit reporting</td>
+<td>We are <strong>not</strong> a credit bureau and do not furnish consumer credit reports</td>
+</tr>
+</tbody>
+</table>
+<h2>2. Who is responsible</h2>
+<p><strong>Iowa Structured Cabling LLC</strong> operates BillBreath for users in the United States. Contact privacy or support requests at <strong>support@billbreath.app</strong> (placeholder — replace before publish).</p>
+<h2>3. Information we collect</h2>
+<h3>3.1 Information you provide</h3>
+<ul>
+<li><strong>Account:</strong> email address, password (handled by Supabase; we do not store your password in the App’s local bill database), and optional display name  </li>
+<li><strong>Guest mode:</strong> a local guest session identifier on your device (not a cloud account)  </li>
+<li><strong>Bills &amp; money planning you enter:</strong> bill names, amounts, due dates, paid/unpaid status, optional notes; paycheck amount, next payday, pay frequency  </li>
+<li><strong>Support:</strong> messages you send to <strong>support@billbreath.app</strong></li>
+</ul>
+<h3>3.2 Information collected automatically (limited)</h3>
+<ul>
+<li><strong>Device / app technical data</strong> that the operating system or Expo runtime may process for the App to run (for example, crash diagnostics if you later enable a crash reporter — <strong>disclose any such SDK before shipping</strong>)  </li>
+<li><strong>Notification permission status</strong> if you enable reminders  </li>
+<li><strong>Subscription / purchase status</strong> on device for Premium; when live store billing is enabled, Apple, Google, and/or RevenueCat will process purchase tokens as described in their policies  </li>
+</ul>
+<p><strong>We do not currently require third-party advertising or marketing analytics SDKs for the core MVP.</strong> If that changes, we will update this Policy and store disclosures before enabling them.</p>
+<h3>3.3 What we do <strong>not</strong> collect in this version</h3>
+<ul>
+<li>Bank login credentials or live bank account balances via aggregators (no Plaid or similar)  </li>
+<li>Automatic transaction feeds  </li>
+<li>Government ID numbers, SSN, or credit file data for credit reporting  </li>
+</ul>
+<h2>4. How we use information</h2>
+<p>We use information to:</p>
+<ul>
+<li>Create and secure your account (Supabase Auth)  </li>
+<li>Provide bill lists, leftover calculations, paycheck settings, and optional local reminders  </li>
+<li>Unlock and manage <strong>Premium</strong> features when you subscribe  </li>
+<li>Respond to support requests  </li>
+<li>Improve reliability and fix bugs  </li>
+<li>Comply with law and enforce our Terms  </li>
+</ul>
+<p>We do <strong>not</strong> use your bill list to sell you third-party financial products in the current MVP description.</p>
+<h2>5. How information is stored</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Where (MVP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bills, paycheck settings, reminder prefs, local Premium demo entitlement</td>
+<td>On your device (e.g., AsyncStorage)</td>
+</tr>
+<tr>
+<td>Auth session for signed-in users</td>
+<td>Managed by <strong>Supabase</strong> with session persistence on device</td>
+</tr>
+<tr>
+<td>Guest session</td>
+<td>On your device only</td>
+</tr>
+<tr>
+<td>Real App Store / Play purchases (when enabled)</td>
+<td>Processed by Apple/Google (and RevenueCat if used); receipt/entitlement status may sync to the App</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cloud sync of bills</strong> is not the default MVP behavior. If we add server-side bill storage later, we will update this Policy and notify users as required.</p>
+<h2>6. Sharing</h2>
+<p>We share information only as needed:</p>
+<ul>
+<li><strong>Service providers:</strong> Supabase (authentication); Apple / Google (app distribution and in-app purchases); RevenueCat if enabled for subscription management  </li>
+<li><strong>Legal:</strong> if required by law, subpoena, or to protect rights, safety, and security  </li>
+<li><strong>Business transfers:</strong> if the Company is involved in a merger, sale, or asset transfer, information may transfer under continued confidentiality commitments  </li>
+</ul>
+<p>We do <strong>not</strong> sell your personal information as that term is commonly used in consumer privacy laws, and we do not share it for cross-context behavioral advertising in the current MVP.</p>
+<h2>7. Notifications</h2>
+<p>Local reminders are scheduled on your device for unpaid bills you choose to track. You can disable reminders in the App or in system settings. Notification content may include bill names and amounts you entered.</p>
+<h2>8. Retention</h2>
+<ul>
+<li><strong>Local bill/paycheck data:</strong> remains on your device until you delete it in the App, clear app data, or uninstall  </li>
+<li><strong>Guest session:</strong> until you sign out/clear data or uninstall  </li>
+<li><strong>Supabase account:</strong> retained until you request deletion or we delete inactive accounts as allowed by law  </li>
+<li><strong>Support emails:</strong> retained as needed to resolve your request and for legitimate business records  </li>
+</ul>
+<p>To request account deletion, email <strong>support@billbreath.app</strong> from the address associated with your account. Device-local data may also need to be cleared by you on the device.</p>
+<h2>9. Security</h2>
+<p>We use reasonable technical and organizational measures appropriate to a small consumer app (including reliance on Supabase and platform OS protections). No method of storage or transmission is 100% secure. You can help by using a strong password and keeping your device updated.</p>
+<h2>10. Children</h2>
+<p>BillBreath is not directed to children under <strong>13</strong>. We do not knowingly collect personal information from children under 13. If you believe a child provided information, contact <strong>support@billbreath.app</strong> and we will take appropriate steps.</p>
+<h2>11. Your choices and rights</h2>
+<p>Depending on your location (including certain U.S. state laws), you may have rights to access, correct, delete, or obtain a copy of personal information, or to appeal a denial. Email <strong>support@billbreath.app</strong>. We will not discriminate against you for exercising privacy rights.</p>
+<p>You can:</p>
+<ul>
+<li>Use guest mode instead of creating an account  </li>
+<li>Decline notification permission  </li>
+<li>Cancel Premium through Apple or Google subscription settings  </li>
+<li>Uninstall the App to remove most on-device data  </li>
+</ul>
+<h2>12. International users</h2>
+<p>The App is operated from the United States. If you use it from elsewhere, your information may be processed in the U.S. and other countries where our providers operate (including Supabase infrastructure regions they use).</p>
+<h2>13. Changes</h2>
+<p>We may update this Policy. We will change the effective date and, where required, provide additional notice. Continued use after an update means you accept the revised Policy.</p>
+<h2>14. Contact</h2>
+<p><strong>Iowa Structured Cabling LLC</strong><br />
+Email: <strong>support@billbreath.app</strong> <em>(placeholder — replace before publish)</em>  </p>
+<p>Related: <a href="./terms-of-service.md">Terms of Service</a> · <a href="./refund-policy.md">Refund Policy</a> · <a href="./data-collection-policy.md">Data Collection Policy</a></p>
+<footer>
+<p>Operator: Iowa Structured Cabling LLC · Support: <a href="mailto:support@billbreath.app">support@billbreath.app</a></p>
+<p><a href="/">All policies</a></p>
+</footer>
+</main>
+</body>
+</html>

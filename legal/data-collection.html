@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Data Collection Policy · BillBreath</title>
+<style>
+:root { color-scheme: light; --teal:#2A9D8F; --cream:#F7F3E9; --ink:#1a1a1a; }
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+header{background:var(--teal);color:#fff;padding:1.25rem 1.5rem} header a{color:#fff;text-decoration:none;font-weight:600}
+main{max-width:42rem;margin:0 auto;padding:2rem 1.25rem 4rem} h1,h2,h3{line-height:1.25} a{color:var(--teal)}
+nav ul{list-style:none;padding:0} nav li{margin:.5rem 0} .meta{color:#555;font-size:.95rem}
+footer{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem;font-size:.9rem;color:#555}
+</style>
+</head>
+<body>
+<header><a href="/">BillBreath</a></header>
+<main>
+<h1>BillBreath Data Collection Policy</h1>
+<p><strong>Effective date:</strong> September 30, 2026<br />
+<strong>Operator / Iowa Structured Cabling LLC:</strong> Iowa Structured Cabling LLC<br />
+<strong>Support:</strong> support@billbreath.app  </p>
+<p>This document describes <strong>what BillBreath collects, why, how long we keep it, and with whom it may be shared</strong>. It complements the <a href="./privacy-policy.md">Privacy Policy</a>. If there is a conflict, the Privacy Policy and applicable law control.</p>
+<h2>1. Scope</h2>
+<p>Applies to the BillBreath mobile app (Expo / React Native) as operated by Iowa Structured Cabling LLC in the United States.</p>
+<h2>2. Categories of data</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+<th>Collected? (MVP)</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account identifiers</td>
+<td>Email, user id from Supabase</td>
+<td>Yes, if you sign up</td>
+<td>Authenticate; show profile</td>
+</tr>
+<tr>
+<td>Credentials</td>
+<td>Password</td>
+<td>Processed by Supabase Auth (not stored in local bill DB)</td>
+<td>Sign-in</td>
+</tr>
+<tr>
+<td>Profile</td>
+<td>Optional name</td>
+<td>Yes, if provided</td>
+<td>Personalize greetings</td>
+</tr>
+<tr>
+<td>Guest identifier</td>
+<td>Local guest id</td>
+<td>Yes, if you use guest mode</td>
+<td>Keep a local session</td>
+</tr>
+<tr>
+<td>Financial planning inputs you type</td>
+<td>Bill name, amount, due date, paid flag, notes; paycheck amount, payday, frequency</td>
+<td>Yes</td>
+<td>Core budgeting features</td>
+</tr>
+<tr>
+<td>Reminder preferences</td>
+<td>Enabled flag, lead days, same-day option</td>
+<td>Yes</td>
+<td>Schedule local notifications</td>
+</tr>
+<tr>
+<td>Notification permission</td>
+<td>OS permission state</td>
+<td>Indirectly (OS)</td>
+<td>Deliver optional reminders</td>
+</tr>
+<tr>
+<td>Subscription status</td>
+<td>Premium active / product id / expiry (demo or store)</td>
+<td>Yes</td>
+<td>Gate Premium features</td>
+</tr>
+<tr>
+<td>Support communications</td>
+<td>Email content you send us</td>
+<td>Yes, if you contact support</td>
+<td>Customer service</td>
+</tr>
+<tr>
+<td>Bank credentials / live transactions</td>
+<td>Account numbers, bank passwords, Plaid tokens</td>
+<td><strong>No</strong></td>
+<td>N/A — not offered yet</td>
+</tr>
+<tr>
+<td>Precise advertising IDs for ads</td>
+<td>IDFA/GAID for ad networks</td>
+<td><strong>Not</strong> used in core MVP as described</td>
+<td>N/A unless later disclosed</td>
+</tr>
+<tr>
+<td>Credit reports / SSN</td>
+<td>Credit file data</td>
+<td><strong>No</strong></td>
+<td>N/A — not a credit bureau</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Legal bases / reasons we process (plain English)</h2>
+<p>U.S. apps often describe purposes rather than GDPR “legal bases.” We process data because:</p>
+<ul>
+<li><strong>You asked us to provide the service</strong> (contract / service delivery)  </li>
+<li><strong>You consented</strong> (notifications; optional account)  </li>
+<li><strong>Legitimate interests</strong> in securing the App and preventing abuse, balanced against your rights  </li>
+<li><strong>Legal compliance</strong> when required  </li>
+</ul>
+<h2>4. Collection methods</h2>
+<ul>
+<li><strong>Directly from you</strong> — forms in the App; support email  </li>
+<li><strong>Automatically</strong> — auth session handled by Supabase SDK; local storage writes for bills/settings; OS notification APIs  </li>
+<li><strong>From stores / billing partners</strong> — when real IAP is enabled, purchase validation via Apple, Google, and/or RevenueCat  </li>
+</ul>
+<p>We do <strong>not</strong> scrape your email inbox or SMS for bills in this version.</p>
+<h2>5. Use of each category (why)</h2>
+<ul>
+<li><strong>Account data</strong> — sign-in, password reset flows (via Supabase), account support  </li>
+<li><strong>Bill &amp; paycheck inputs</strong> — calculate “left this paycheck,” list bills, mark paid, schedule reminders  </li>
+<li><strong>Reminder prefs</strong> — decide when local notifications fire  </li>
+<li><strong>Premium status</strong> — unlock insights and longer reminder lead times  </li>
+<li><strong>Support email</strong> — answer questions, investigate bugs, process deletion requests  </li>
+</ul>
+<h2>6. Retention</h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Typical retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On-device bills, paycheck, reminder prefs</td>
+<td>Until you delete entries, clear app storage, or uninstall</td>
+</tr>
+<tr>
+<td>Guest session</td>
+<td>Until sign-out/clear/uninstall</td>
+</tr>
+<tr>
+<td>Supabase auth account</td>
+<td>Until deletion request or account closure</td>
+</tr>
+<tr>
+<td>Local Premium demo entitlement</td>
+<td>Until cleared in-app or app data reset</td>
+</tr>
+<tr>
+<td>Store subscription records</td>
+<td>Per Apple/Google (and RevenueCat) retention; App may cache entitlement status while installed</td>
+</tr>
+<tr>
+<td>Support emails</td>
+<td>As needed for the request, then routine business email retention</td>
+</tr>
+</tbody>
+</table>
+<p>We do not promise indefinite cloud backups of bills in the MVP because bills are primarily on-device.</p>
+<h2>7. Sharing and processors</h2>
+<table>
+<thead>
+<tr>
+<th>Recipient</th>
+<th>Role</th>
+<th>Data involved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Supabase</strong></td>
+<td>Authentication backend</td>
+<td>Email, auth metadata, session</td>
+</tr>
+<tr>
+<td><strong>Apple / Google</strong></td>
+<td>App distribution; in-app purchases</td>
+<td>Purchase receipts, device account identifiers they control</td>
+</tr>
+<tr>
+<td><strong>RevenueCat</strong> (if enabled)</td>
+<td>Subscription status helper</td>
+<td>Purchase tokens / subscriber ids</td>
+</tr>
+<tr>
+<td><strong>Iowa Structured Cabling LLC</strong></td>
+<td>Operator</td>
+<td>Support emails; limited operational access</td>
+</tr>
+<tr>
+<td><strong>Law enforcement / regulators</strong></td>
+<td>Legal process</td>
+<td>Only if legally required</td>
+</tr>
+</tbody>
+</table>
+<p>No sale of personal information for monetary consideration is intended. No bank aggregators in this version.</p>
+<h2>8. Cross-border transfer</h2>
+<p>Auth and infrastructure providers may process data in the United States or other regions they operate. By using a cloud account, you understand your account data may leave your local device.</p>
+<h2>9. Security measures (high level)</h2>
+<ul>
+<li>Passwords handled by Supabase Auth (hashed/managed by provider)  </li>
+<li>Local data protected by device lock / OS app sandbox  </li>
+<li>HTTPS for network calls to Supabase  </li>
+<li>Least-privilege access for support  </li>
+</ul>
+<p>Report suspected security issues to <strong>support@billbreath.app</strong>.</p>
+<h2>10. Your controls</h2>
+<ul>
+<li>Delete individual bills in the App  </li>
+<li>Sign out; clear guest session  </li>
+<li>Disable notifications  </li>
+<li>Cancel Premium in store settings  </li>
+<li>Request account deletion via <strong>support@billbreath.app</strong>  </li>
+<li>Uninstall the App  </li>
+</ul>
+<h2>11. Changes to collection practices</h2>
+<p>If we add <strong>bank linking</strong>, <strong>cloud bill sync</strong>, <strong>analytics</strong>, or <strong>ads</strong>, we will update this Policy, the Privacy Policy, and store “Data safety” / nutrition labels <strong>before</strong> those features collect new data types.</p>
+<h2>12. Contact</h2>
+<p><strong>Iowa Structured Cabling LLC</strong><br />
+Email: <strong>support@billbreath.app</strong> <em>(placeholder — replace before publish)</em>  </p>
+<p>Related: <a href="./privacy-policy.md">Privacy Policy</a> · <a href="./terms-of-service.md">Terms of Service</a> · <a href="./refund-policy.md">Refund Policy</a></p>
+<footer>
+<p>Operator: Iowa Structured Cabling LLC · Support: <a href="mailto:support@billbreath.app">support@billbreath.app</a></p>
+<p><a href="/">All policies</a></p>
+</footer>
+</main>
+</body>
+</html>
